@@ -20,7 +20,7 @@ class Window:
         self.__root.update()
 
 
-    def wait_to_close(self):
+    def wait_for_close(self):
         self.running = True
         while self.running:
             self.redraw()

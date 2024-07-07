@@ -12,7 +12,7 @@ class Maze:
         cell_size_x,
         cell_size_y,
         win=None,
-        seed=None,
+        seed=True,
     ):
         self._cells = []
         self._x1 = x1
@@ -54,7 +54,7 @@ class Maze:
         if self._win is None:
             return
         self._win.redraw()
-        time.sleep(0.05)
+        time.sleep(0.025)
 
     def _open_entrance_and_exit(self):
         self._cells[0][0].has_top_wall = False
@@ -183,3 +183,4 @@ class Maze:
     # create the moves for the solution using a depth first search
     def solve(self):
         return self._solve_r(0, 0)
+
